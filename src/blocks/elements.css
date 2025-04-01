@@ -1,0 +1,95 @@
+.elements {
+  max-width: 880px;
+  margin: 0 auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 282px);
+  column-gap: 17px;
+  row-gap: 20px;
+}
+
+.element {
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* max-height: 361px; */
+  max-width: 282px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.element__image {
+  width: 282px;
+  height: 282px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+
+.element__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 15px 31px 21px;
+}
+.element__title {
+  color: #000000;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  margin: 0;
+  max-width: 230px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__image-heart {
+  background-image: url("../images/Group.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 20px;
+  height: 20px;
+}
+
+.element__image-heart:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.element__image-heart-liked {
+  background-image: url(../images/Unionblack.png);
+}
+
+.element__delete {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+.element__delete:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .elements {
+    max-width: 581px;
+    grid-template-columns: repeat(2, 282px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .elements {
+    max-width: 282px;
+    grid-template-columns: 1fr;
+  }
+}
